@@ -17,11 +17,11 @@ const verifyLogin = async (ctx, next) => {
 
   const [ userInfo ] = result
   
-  // const verifyPassword = await passwordDecrypt(password, userInfo.password)
+  const verifyPassword = await passwordDecrypt(password + '', userInfo.password)
 
-  // if(!verifyPassword) {
-  //   return ctx.app.emit('error', new Error(PASSWORD_IS_NOT_CORRECT), ctx)
-  // }
+  if(!verifyPassword) {
+    return ctx.app.emit('error', new Error(PASSWORD_IS_NOT_CORRECT), ctx)
+  }
 
   ctx.userInfo = userInfo
 

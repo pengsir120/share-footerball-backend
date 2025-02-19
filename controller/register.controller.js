@@ -5,9 +5,9 @@ class RegisterController {
   async register(ctx) {
     const { name, password } = ctx.request.body    
 
-    // const passwordEncrypted = await passwordEncrypt(password)
+    const passwordEncrypted = await passwordEncrypt(password + '')
 
-    const result = await userService.register(name, password)  
+    const result = await userService.register(name, passwordEncrypted)  
     console.log(result);
     
     ctx.body = 'register'
