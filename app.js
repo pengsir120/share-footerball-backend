@@ -14,6 +14,7 @@ const orderRouter = require('./router/order.router')
 const avatarRouter = require('./router/upload.router')
 const fileRouter = require('./router/file.router')
 const questionRouter = require('./router/question.router')
+const userRouter = require('./router/user.router')
 const { wrapperMiddleware } = require('./middleware/wrapper.middleware')
 
 const app = new Koa()
@@ -40,6 +41,8 @@ app.use(fileRouter.routes())
 app.use(fileRouter.allowedMethods())
 app.use(questionRouter.routes())
 app.use(questionRouter.allowedMethods())
+app.use(userRouter.routes())
+app.use(userRouter.allowedMethods())
 
 app.use(wrapperMiddleware)
 

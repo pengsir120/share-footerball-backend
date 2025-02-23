@@ -2,7 +2,7 @@ const rechargeService = require("../service/recharge.service");
 const userService = require("../service/user.service");
 
 class RechargeController {
-  async recharge(ctx) {
+  async recharge(ctx, next) {
     const { id: userId, name } = ctx.userInfo
     const { amount, status, orderNo } = ctx.orderInfo
 
@@ -18,6 +18,7 @@ class RechargeController {
       }
     }
     // ctx.body = 'recharge'
+    await next()
   }
 }
 

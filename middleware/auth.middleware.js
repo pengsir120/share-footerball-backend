@@ -20,7 +20,7 @@ const verifyAuth = async(ctx, next) => {
 
   ctx.userInfo = userInfo
   
-  console.log(userInfo);
+  console.log('authMid userInfo', userInfo);
 
   await next()
 }
