@@ -3,10 +3,10 @@ const fs = require('node:fs')
 const APP_HOST = 'localhost'
 const APP_PORT = 9000
 
-const DATABASE_HOST = 'localhost'
+const DATABASE_HOST = '47.120.47.109'
 const DATABASE_PORT = 3306
 const DATABASE_USER = 'root'
-const DATABASE_PASSWORD = '123456'
+const DATABASE_PASSWORD = 'Madeinchina120$'
 const DATABASE_NAME = 'share-footerball'
 
 const PRIVATE_KEY = fs.readFileSync('./keys/private_key.pem')
