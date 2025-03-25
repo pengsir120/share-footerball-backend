@@ -1,6 +1,6 @@
 const fs = require('node:fs')
 
-const APP_HOST = 'localhost'
+const APP_HOST = 'www.chenruipengweb.xyz'
 const APP_PORT = 9000
 
 const DATABASE_HOST = '47.120.47.109'

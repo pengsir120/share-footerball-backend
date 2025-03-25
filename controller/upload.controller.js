@@ -9,7 +9,7 @@ class UploadController {
     console.log(filename, mimetype, size, id);
     const result = await uploadService.insertAvatarFile(filename, mimetype, size, id)
     if(result.insertId) {
-      const avatar = `http://${APP_HOST}:${APP_PORT}/file/${filename}`
+      const avatar = `https://${APP_HOST}:${APP_PORT}/file/${filename}`
       await userService.updateUserAvatar(avatar, id)
     }
     ctx.body = 'upload avatar'
