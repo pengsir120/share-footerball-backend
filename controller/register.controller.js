@@ -11,6 +11,7 @@ class RegisterController {
     console.log(result);
     
     ctx.body = 'register'
+    await next()
   }
 }
 
