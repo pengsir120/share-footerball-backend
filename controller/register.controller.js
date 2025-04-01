@@ -2,7 +2,7 @@ const userService = require("../service/user.service")
 const { passwordEncrypt } = require("../utils/passwordHandlers")
 
 class RegisterController {
-  async register(ctx) {
+  async register(ctx, next) {
     const { name, password } = ctx.request.body    
 
     const passwordEncrypted = await passwordEncrypt(password + '')
