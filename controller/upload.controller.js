@@ -13,7 +13,9 @@ class UploadController {
       const avatar = `https://${APP_HOST}/file/${filename}`
       await userService.updateUserAvatar(avatar, id)
     }
-    ctx.body = 'upload avatar'
+    ctx.body = {
+      avatarUrl: `https://${APP_HOST}/file/${filename}`
+    }
     await next()
   }
 }
